@@ -47,7 +47,7 @@ function stylesMin() {
 		src(cfg.srcDir + 'scss/**/*.{scss,sass}', { sourcemaps: false })
 			.pipe(
 				sass({
-					outputStyle: 'compressed', // expanded/compressed
+					outputStyle: 'expanded', // expanded/compressed
 					silenceDeprecations: ['legacy-js-api'], // Disable old API warnings
 				}).on('error', sass.logError),
 			)

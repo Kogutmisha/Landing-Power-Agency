@@ -9,9 +9,13 @@ html {
 html,
 body {
 	height: 100%;
-	font-family: $font_1;
 	font-weight: 400;
 	scroll-behavior: smooth;
+}
+
+body{
+	font-family: $font_1;
+	color: $color_text;
 }
 
 .wrapper {
@@ -29,6 +33,20 @@ body {
 .section {
 	width: 100%;
 	padding: 10rem 0;
+	&.section--bg{
+		background-color: $color_bg_2;
+	}
+}
+
+.section_title{
+	font-size: 4rem;
+	font-weight: 800;
+	line-height: 1.5;
+	color: $color_title;
+
+	&.section_title--centr{
+		text-align: center;
+	}
 }
 
 .container {
