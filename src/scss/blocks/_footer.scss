@@ -1,0 +1,99 @@
+@use './helpers/abstracts' as *;
+
+.section--footer {
+	background-color: $color_text;
+	color: #fff;
+    height: 42.8rem;
+    padding: 5.1rem 0 5.7rem;
+}
+
+.section--footer_title {
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.footer_social {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 4.8rem;
+}
+
+.footer_social_list {
+	display: flex;
+	gap: 1.6rem;
+}
+
+.footer_social_item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 4.8rem;
+	height: 4.8rem;
+	border-radius: 50%;
+	background-color: $color_accent;
+}
+
+.footer_social_img {
+	width: 1.4rem;
+	height: 1.6rem;
+}
+
+.footer_social_img_w {
+	width: 1.4rem;
+	height: 1.6rem;
+}
+
+.footer_nav{
+    margin-top: 4.8rem;
+}
+
+.footer_nav_list_w {
+	display: flex;
+    justify-content: space-between;
+}
+
+.footer_nav_list {
+	display: flex;
+    align-items: center;
+	gap: 8rem;
+}
+
+.footer_nav_item {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.42;
+	text-align: left;
+    text-wrap: nowrap;
+}
+
+.btn_cont {
+	width: 18.1rem;
+	height: 4.7rem;
+	background-color: $color_accent;
+	color: #fff;
+	border-radius: 1.2rem;
+	// box-shadow: 0px 6px 20px 0px #706fe580;
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 1.5;
+	text-align: center;
+
+	// margin-left: 13.43rem;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+.footer_power{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7.6rem;
+}
+
+
