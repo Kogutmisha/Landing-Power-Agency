@@ -1,0 +1,43 @@
+@use './helpers/abstracts' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+	height: 6rem;
+    background-color: #fff;
+}
+
+
+.header_in {
+    height: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+
+}
+
+.header_logo_w{
+    width: 9.4rem;
+    height: 3.8rem;
+}
+
+.header_nav_w {
+	display: flex;
+	gap: 4.5rem;
+}
+
+.header_nav_item{
+    text-wrap: nowrap;
+}
+
+
+.header_nav_link {
+	text-decoration: none;
+	font-family: Inter;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.76;
+	text-align: left;
+    color: $color_title;
+}
