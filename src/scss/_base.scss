@@ -13,7 +13,7 @@ body {
 	scroll-behavior: smooth;
 }
 
-body{
+body {
 	font-family: $font_1;
 	color: $color_text;
 }
@@ -23,7 +23,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 .main {
@@ -33,29 +33,57 @@ body{
 .section {
 	width: 100%;
 	padding: 10rem 0;
-	&.section--bg{
+	&.section--bg {
 		background-color: $color_bg_2;
+	}
+
+	
+}
+.section__decor {
+	position: relative;
+
+	&::after,
+	&::before {
+		position: absolute;
+		top: 0;
+
+		content: '';
+
+		width: 10rem;
+		height: 7.1rem;
+
+		background-image: url(../imgs/comments_img/points.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&::after{
+		left: -6rem;
+	
+	}
+
+	&::before{
+		right: -6rem;
+		top: 62rem;
 	}
 }
 
-.section_title{
+.section_title {
 	font-size: 4rem;
 	font-weight: 800;
 	line-height: 1.5;
 	color: $color_title;
 
-	&.section_title--centr{
+	&.section_title--centr {
 		text-align: center;
 	}
 }
 
 .container {
-	max-width: 144.4rem;
+	max-width: 114.4rem;
 	width: 100%;
 	padding: 0 2rem;
 
 	margin: 0 auto;
 }
-
-
-

@@ -1,26 +1,64 @@
 @use './helpers/abstracts' as *;
 
 .comments {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 7rem;
+	position: relative;
+	display: block;
+
+
+	max-width: 67rem;
+	width: 100%;
+	margin: 0 auto;
+
+	&::after,
+	&::before{
+		position: absolute;
+		top: 0;
+
+
+		content: "";
+
+		width: 5.6rem;
+		height: 10rem;
+
+
+		background-image: url(../imgs/comments_img/quote.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&::after{
+		left: -10rem;
+		rotate: 180deg;
+		top: -5rem;
+	}
+
+	&::before{
+		right: -13rem;
+		top: -5rem;
+	}
 }
 
 .comments__title {
 	margin-bottom: 11.5rem;
 }
 
+.comments_content{
+	display: block;
+	overflow: hidden;
+}
+
 .comments__item {
 	display: block;
-	max-width: 67rem;
+	max-width: 100%;
 	width: 100%;
+	margin-bottom: 7.1rem;
 }
 
 .comments__item_text {
 	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 3.5;
 	text-align: center;
 	color: $color_text_2;
 }
@@ -28,21 +66,60 @@
 //nav
 
 .comments_nav {
-	display: flex;
-	flex-direction: row;
+	display: block;
+	height: 17rem;
 }
 
 .comments_nav_img_w {
 	border-radius: 50%;
 	overflow: hidden;
-	height: 8.6rem;
-	width: 8.6rem;
+	transition: all $transition_dur ease-in-out;
+	border: 0.2rem solid #fff;
+	margin: 0 auto;
+
+	.swiper-slide.swiper-slide-thumb-active & {
+		height: 8.6rem;
+		width: 8.6rem;
+		box-shadow: 0 0 0 0.5rem #706fe5;
+	}
+
+	.swiper-slide:not(.swiper-slide-thumb-active) & {
+		height: 6.7rem;
+		width: 6.6rem;
+	}
 }
 
 .comments_nav_img {
 	@extend %cover_img;
 }
 
+// .comments_nav__data {
+// 	text-align: center;
+// }
+
 .comments_nav__data {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1rem;
+
+	.swiper-slide:not(.swiper-slide-thumb-active) & {
+		display: none;
+	}
+}
+
+.comments_nav_name {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.5;
 	text-align: center;
+	white-space: nowrap;
+}
+
+.comments_nav_pos {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	white-space: nowrap;
 }
