@@ -1,0 +1,29 @@
+@use './helpers/abstracts' as *;
+
+.trs_by{
+	display: block;
+	overflow: hidden;
+}
+
+
+.trs_by_title {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-align: center;
+    margin-bottom: 4.7rem;
+}
+
+.trs_logo_list {
+	display: block;
+	overflow: hidden;
+	padding-left: 6rem;
+
+	
+}
+
+.trs_list_item{
+	width: 12rem;
+	height: 4.2rem;
+	margin: 0 auto;
+}
