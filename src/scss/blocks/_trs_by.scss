@@ -1,28 +1,46 @@
 @use './helpers/abstracts' as *;
 
-.trs_by{
+.trs_by {
 	display: block;
 	overflow: hidden;
+	
 }
-
 
 .trs_by_title {
 	font-size: 2rem;
 	font-weight: 600;
 	line-height: 1.2;
 	text-align: center;
-    margin-bottom: 4.7rem;
+	margin-bottom: 4.7rem;
 }
 
 .trs_logo_list {
-	display: block;
+	position: relative;
 	overflow: hidden;
 	padding-left: 6rem;
+	&::after,
+	&::before {
+		position: absolute;
+		top: 0;
+		content: '';
+		width: 10rem;
+		height: 100%;
+		z-index: 2;
+	}
 
-	
+
+	&::before {
+		left: 0;
+		background-image: linear-gradient(to right, #fff, transparent);
+	}
+
+	&::after {
+		right: 0;
+		background-image: linear-gradient(to left, #fff, transparent);
+	}
 }
 
-.trs_list_item{
+.trs_list_item {
 	width: 12rem;
 	height: 4.2rem;
 	margin: 0 auto;
