@@ -1,14 +1,31 @@
+@use './helpers/abstracts' as *;
+
+
 .wcw_content {
 	display: flex;
 	gap: 2.9rem;
+
+
+	
+	@include bp($point_1) {
+		flex-direction: column;
+	
+	}
+	
 }
 
 .wcw_content_left {
 	display: flex;
 	gap: 2.9rem;
+	
+	@include bp($point_5) {
+		flex-direction: column;
+	
+	}
+	
 }
 
-.wcw_content_left_r {
+.wcw_content_left_up {
 	margin-bottom: 2.9rem;
 }
 
@@ -32,4 +49,13 @@
 	line-height: 2.6rem;
 	text-align: left;
     margin-top: 1.2rem;
+}
+
+.wcw_content_img{
+	
+	@include bp($point_5) {	
+		width: 100%;
+	
+	}
+	
 }

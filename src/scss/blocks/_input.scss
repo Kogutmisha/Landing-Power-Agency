@@ -5,10 +5,24 @@
 	flex-direction: row;
 	justify-content: center;
 	gap: 6.4rem;
+	
+	@include bp($point_3) {
+		flex-direction: column;
+		align-items: center;
+	
+	}
+
+	
 }
 
 .input_content {
-	width: 49rem;
+	max-width: 49rem;
+	width: 100%;
+
+	
+	
+	
+
 }
 
 .input_title {
@@ -17,6 +31,11 @@
 	line-height: 1.3;
 	text-align: left;
 	margin-bottom: 2rem;
+
+	@include bp($point_5) {
+		text-align: center;
+	
+	}
 }
 
 
@@ -24,7 +43,8 @@
 .input_email {
 	display: flex;
 	align-items: center;
-	width: 49.1rem;
+	max-width: 49.1rem;
+	width: 100%;
 	height: 7.2rem;
 	background-color: rgba(112, 111, 229, 0.1);
 	border-radius: 1.2rem;
@@ -57,11 +77,23 @@
 	display: flex;
 	margin-bottom: 6rem;
 	gap: 3rem;
+
+	
+	@include bp($point_5) {
+		flex-direction: column;
+	
+	}
+	
 }
 
 .input_logo_down {
 	display: flex;
 	gap: 3rem;
+	@include bp($point_5) {
+		flex-direction: column;
+	
+	}
+	
 }
 
 .input_logo-bg {
@@ -76,6 +108,8 @@
 
 .input_logo_img {
 	margin-bottom: 1.1rem;
+	width: 5rem;
+	height: 5rem;
 }
 .input_logo-bg {
 	margin-bottom: 1.1rem;
@@ -100,3 +134,4 @@
 	line-height: 1.75;
 	text-align: left;
 }
+
