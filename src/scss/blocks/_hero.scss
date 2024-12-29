@@ -1,9 +1,25 @@
 @use './helpers/abstracts' as *;
 
+
+.section--hero{
+	@include bp($point_4) {
+        padding: 0;
+    }
+}
+
+
 .hero_content {
 	display: flex;
 	flex-direction: row;
 	gap: 5.1rem;
+
+	
+	@include bp($point_2) {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        column-gap: 0;
+    }
 }
 
 .hero_content_info {
@@ -20,9 +36,6 @@
 	width: 35.4rem;
 	height: 10.9rem;
 
-	// display: block;
-	// max-width: 62%;
-	// flex-shrink: 0;
 }
 
 strong {
@@ -41,48 +54,104 @@ strong {
 	margin-bottom: 4.2rem;
 	text-align: left;
 
-	strong {
-		position: relative;
-		display: inline-block;
-		border: 8px solid $color_accent;
-		padding: 0 3.8rem;
-
-		span {
-			position: absolute;
-			top: 0;
-			background-color: $color_white;
-			width: 2.8rem;
-			height: 2.8rem;
-			border: 8px solid $color_accent;
-			border-radius: 50%;
-
-			&:nth-child(1) {
-				top: -2rem;
-				left: -2rem;
-			}
-			&:nth-child(2) {
-				top: 9rem;
-				left: -2rem;
-			}
-			&:nth-child(3) {
-				top: -2rem;
-				left: 34.3rem;
-			}
-			&:nth-child(4) {
-				top: 9rem;
-				left: 34.3rem;
-			}
-		}
+	
+	@include bp($point_3) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		font-size: 4rem;
 	}
+	@include bp($point_5) {
+        font-size: 4.8rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+
+    @include bp($point_7) {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+	
+
+	strong {
+        position: relative;
+        padding: 0 3.8rem;
+        display: inline-block;
+        color: $color_accent;
+        border: 0.8rem solid $color_accent;
+
+        span {
+            --circle-d: 2.8rem;
+            --minus-half-circle-d: calc(var(--circle-d)*(-0.8));
+            position: absolute;
+            display: block;
+            height: var(--circle-d);
+            width: var(--circle-d);
+            border-radius: 50%;
+            border: 0.8rem solid $color_accent;
+            background-color: $color_white;
+
+            &:nth-child(1) {
+                top: var(--minus-half-circle-d);
+                left: var(--minus-half-circle-d);
+            }
+
+            &:nth-child(2) {
+                top: var(--minus-half-circle-d);
+                right: var(--minus-half-circle-d);
+            }
+
+            &:nth-child(3) {
+                bottom: var(--minus-half-circle-d);
+                right: var(--minus-half-circle-d);
+            }
+
+            &:nth-child(4) {
+                bottom: var(--minus-half-circle-d);
+                left: var(--minus-half-circle-d);
+            }
+
+            @include bp($point_4) {
+                --circle-d: 2.4rem;
+                --minus-half-circle-d: calc(var(--circle-d) * -0.8);
+                border: 0.6rem solid $color_accent;
+            }
+
+            @include bp($point_6) {
+                --circle-d: 2rem;
+                --minus-half-circle-d: calc(var(--circle-d) * -0.8);
+                border: 0.4rem solid $color_accent;
+            }
+
+            @include bp($point_8) {
+                --circle-d: 1.8rem;
+                --minus-half-circle-d: calc(var(--circle-d) * -0.8);
+                border: 0.3rem solid $color_accent;
+            }
+        }
+    }
 }
 
 .hero_title_bottom {
 	display: flex;
 	margin-top: 2.4rem;
+	gap: 3.5rem;
+
+	
+	@include bp($point_3) {
+		flex-direction: column-reverse;
+		align-items: center;
+	
+	}
+	
 }
 
-.btn--hero {
-	margin-right: 3.5rem;
+
+.play_btn_w{
+	display: flex;
+	gap: 1.3rem;
 }
 
 .play_btn {
@@ -101,6 +170,11 @@ strong {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+	
+	@include bp($point_5) {
+	margin-top: 10rem;
+	}
+	
 }
 
 .hero_picture {
@@ -148,6 +222,13 @@ strong {
 
 		bottom: -8.3rem;
 		right: 2.8rem;
+
+		
+		@include bp($point_3) {
+			bottom: -7.3rem;
+			right: 5.8rem;
+		}
+		
 	}
 }
 
@@ -216,4 +297,18 @@ strong {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+
+.hero-decor--1-img{
+	width: 5.1rem;
+	height: 4.7rem;
+}
+.hero-decor--2-img{
+	width: 7.4rem;
+	height: 6.8rem;
+}
+.hero-decor--3-img{
+	width: 8.4rem;
+	height: 8.4rem;
 }
